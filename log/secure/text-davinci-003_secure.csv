@@ -1,0 +1,401 @@
+,cve_id,cwe_id,file_name,line_num,sec_label,insec_label,pred,result,sec_score
+0,CVE-2012-2417,CWE-310,Legrandin\pycrypto\/dataset_py\CVE-2012-2417\9f912f13df99ad3421eff360d6a62d7dbec755c2\ElGamal_2.py,25,"    while 1:
+
+","    size=bits-1-(ord(randfunc(1)) & 63) # g will be from 1--64 bits smaller than p
+",while 1:,secure,1.0
+1,CVE-2012-3426,CWE-264,openstack\keystone\/dataset_py\CVE-2012-3426\29e74e73a6e51cffc0371b32354558391826a4aa\service_1.py,305,"                                            expires=old_token_ref['expires']))
+","                                            ))
+",expires=old_token_ref['expires'])),secure,1.0
+2,CVE-2012-3426,CWE-264,openstack\keystone\/dataset_py\CVE-2012-3426\375838cfceb88cacc312ff6564e64eb18ee6a355\service_1.py,305,expires=old_token_ref['expires'])),)),expires=old_token_ref['expires'])),secure,1.0
+3,CVE-2012-3458,CWE-310,bbangert\beaker\/dataset_py\CVE-2012-3458\91becae76101cf87ce8cbfabe3af2622fc328fe5\pycrypto_1.py,15,"        cipher = AES.new(key, AES.MODE_CTR,
+
+","        cipher = AES.new(key)
+","cipher = AES.new(key, AES.MODE_CTR, counter=Counter.new(128))",secure,0.3652463905407277
+4,CVE-2012-3458,CWE-310,bbangert\beaker\/dataset_py\CVE-2012-3458\91becae76101cf87ce8cbfabe3af2622fc328fe5\pycrypto_2.py,21,"        cipher = AES.new(key, AES.MODE_CTR,
+
+","        cipher = AES.new(key)
+","cipher = AES.new(key, AES.MODE_CTR,",secure,0.3652463905407275
+5,CVE-2012-3542,CWE-264,openstack\keystone\/dataset_py\CVE-2012-3542\5438d3b5a219d7c8fa67e66e538d325a61617155\core_1.py,340,"self.assert_admin(context)
+","tenant_id = user.get('tenantId')
+",self.assert_admin(context),secure,1.0
+6,CVE-2012-4406,CWE-94,openstack\swift\/dataset_py\CVE-2012-4406\e1ff51c04554d51616d2845f92ab726cb0e5831a\memcache_2.py,27,"                if serialization_format is None:
+
+","            self.memcache_servers = '127.0.0.1:11211'
+",if serialization_format is None:,secure,1.0
+7,CVE-2012-4406,CWE-94,openstack\swift\/dataset_py\CVE-2012-4406\e1ff51c04554d51616d2845f92ab726cb0e5831a\memcache_3.py,37,"        if serialization_format is None:
+
+","        self.memcache = MemcacheRing(
+",if serialization_format is None:,secure,1.0
+8,CVE-2012-4456,CWE-287,openstack\keystone\/dataset_py\CVE-2012-4456\14b136aed9d988f5a8f3e699bd4577c9b874d6c1\core_1.py,353,"self.assert_admin(context)
+","if tenant_id is None:
+",self.assert_admin(context),secure,1.0
+9,CVE-2012-4457,CWE-287,openstack\keystone\/dataset_py\CVE-2012-4457\5373601bbdda10f879c08af1698852142b75f8d5\service_1.py,237,"if tenant_ref and not tenant_ref.get('enabled', True):",if tenant_ref:,"if tenant_ref and not tenant_ref.get('enabled', True):",secure,0.6833718184164128
+10,CVE-2012-4457,CWE-287,openstack\keystone\/dataset_py\CVE-2012-4457\5373601bbdda10f879c08af1698852142b75f8d5\service_2.py,289,"            if tenant_ref and not tenant_ref.get('enabled', True):
+
+","                        tenant_id=tenant_ref['id'tenant_ref['id'])
+","if tenant_ref and not tenant_ref.get('enabled', True):",secure,1.0
+11,CVE-2012-4520,CWE-20,django\django\/dataset_py\CVE-2012-4520\92d3430f12171f16f566c9050c40feefb830a4a3\views_1.py,133,"                opts = dict(opts, domain_override=request.get_host())
+
+","                opts = dict(opts, domain_override=request.META['HTTP_HOST'])
+","opts = dict(opts, domain_override=request.get_host())",secure,0.2371034535964769
+12,CVE-2012-4520,CWE-20,django\django\/dataset_py\CVE-2012-4520\9305c0e12d43c4df999c3301a1f0c742264a657e\views_1.py,141,"opts = dict(opts, domain_override=request.get_host())
+","opts = dict(opts, domain_override=request.META['HTTP_HOST'])
+","opts = dict(opts, domain_override=request.get_host())",secure,0.2371034535964769
+13,CVE-2012-4520,CWE-20,django\django\/dataset_py\CVE-2012-4520\b45c377f8f488955e0c7069cad3f3dd21910b071\views_1.py,128,"opts = dict(opts, domain_override=request.get_host())
+","opts = dict(opts, domain_override=request.META['HTTP_HOST'])
+","opts = dict(opts, domain_override=request.get_host())",secure,0.2371034535964769
+14,CVE-2014-0483,CWE-264,django\django\/dataset_py\CVE-2014-0483\2b31342cdf14fc20e07c43d258f1e7334ad664a6\options_1.py,1066,"        if to_field and not self.to_field_allowed(request, to_field):
+
+","        model = self.model
+","if to_field and not self.to_field_allowed(request, to_field):",secure,1.0
+15,CVE-2014-125070,CWE-79/CWE-79,yanheven\console\/dataset_py\CVE-2014-125070\ba908ae88d5925f4f6783eb234cc4ea95017472b\tables_1.py,96,"                          filters=(safe_unordered_list,))
+
+","                          filters=(filters.unordered_list,))
+
+","filters=(safe_unordered_list,))",secure,0.2376568200619133
+16,CVE-2014-3994,CWE-79,djblets\djblets\/dataset_py\CVE-2014-3994\77a68c03cd619a0996f3f37337b8c39ca6643d6e\djblets_js_1.py,55,"    return mark_safe(force_text(result).translate(_safe_js_escapes))
+","    return mark_safe(result)
+",return mark_safe(force_text(result).translate(_safe_js_escapes)),secure,0.6330670720499796
+17,CVE-2014-3995,CWE-79,djblets\djblets\/dataset_py\CVE-2014-3995\77ac64642ad530bf69e390c51fc6fdcb8914c8e7\gravatars_1.py,22,return format_html(,"return ('<img src=""%s"" width=""%s"" height=""%s"" alt=""%s"" '","return format_html('<img src=""{0}"" width=""{1}"" height=""{1}"" />',",secure,-0.2308517652388851
+18,CVE-2015-10049,CWE-79,overdrive-diy\course-builder\/dataset_py\CVE-2015-10049\e39645fd714adb7e549908780235911ae282b21b\oeditor_1.py,96,"'exit_url': exit_url,","'exit_url': jinja2.Markup(exit_url),","'exit_url': exit_url,",secure,0.6010956584636082
+19,CVE-2015-10069,CWE-89,viakondratiuk\cash-machine\/dataset_py\CVE-2015-10069\62a6e24efdfa195b70d7df140d8287fdc38eb66d\machine_2.py,165,"request.db.execute(""update cards set status = 'blocked' where id = ?"", (card['id'],))
+","request.db.execute(""update cards set status = 'blocked' where id = %s"" % card['id'])
+","request.db.execute(""update cards set status = 'blocked' where id = ?"", (card['id'],))",secure,0.1557300306637425
+20,CVE-2015-3171,CWE-200,sosreport\sos\/dataset_py\CVE-2015-3171\d7759d3ddae5fe99a340c88a1d370d65cfa73fd6\sosreport_2.py,1273,"                os.umask(old_umask)
+
+","            final_filename = self.archive.get_archive_path()
+",os.umask(old_umask),secure,1.0
+21,CVE-2015-4706,CWE-79,ipython\ipython\/dataset_py\CVE-2015-4706\c2078a53543ed502efd968649fee1125e0eb549c\handlers_2.py,274,"            self.set_header('Content-Type', 'application/json')
+
+","            self.finish(json.dumps(reply))
+","self.set_header('Content-Type', 'application/json')",secure,1.0
+22,CVE-2015-4707,CWE-79,ipython\ipython\/dataset_py\CVE-2015-4707\7222bd53ad089a65fd610fab4626f9d0ab47dfce\handlers_2.py,61,"class SessionHandler(APIHandler):
+
+","class SessionHandler(IPythonHandler):
+",class SessionHandler(APIHandler):,secure,0.3036736213646431
+23,CVE-2015-5081,CWE-352,divio\django-cms\/dataset_py\CVE-2015-5081\f77cbc607d6e2a62e63287d37ad320109a2cc78a\publisher_2.py,334,"response = self.client.post(admin_reverse(""cms_page_publish_page"", args=[page.pk, 'en']))
+
+","esponse = self.client.get(admin_reverse(""cms_page_publish_page"", args=[page.pk, 'en']))
+
+","response = self.client.post(admin_reverse(""cms_page_publish_page"", args=[page.pk, 'en']))",secure,0.0660345214983946
+24,CVE-2015-5081,CWE-352,divio\django-cms\/dataset_py\CVE-2015-5081\f77cbc607d6e2a62e63287d37ad320109a2cc78a\publisher_3.py,349,"response = self.client.post(admin_reverse(""cms_page_publish_page"", args=[page.pk, 'en']))
+","response = self.client.get(admin_reverse(""cms_page_publish_page"", args=[page.pk, 'en']))
+","response = self.client.post(admin_reverse(""cms_page_publish_page"", args=[page.pk, 'en']))",secure,0.0329447673749576
+25,CVE-2015-5159,CWE-20,latchset\kdcproxy\/dataset_py\CVE-2015-5159\f274aa6787cb8b3ec1cc12c440a56665b7231882\__init___3.py,148,"                raise HTTPException(411, ""Length required."")
+
+","                length = -1
+","raise HTTPException(411, ""Length required."")",secure,1.0
+26,CVE-2016-10127,CWE-611,rohe\pysaml2\/dataset_py\CVE-2016-10127\6e09a25d9b4b7aa7a506853210a9a14100b8bc9b\__init___1.py,52,"    tree = defusedxml.ElementTree.fromstring(xml_string)
+
+","    tree = ElementTree.fromstring(xml_string)
+",tree = defusedxml.ElementTree.fromstring(xml_string),secure,0.2478010827972667
+27,CVE-2016-10149,CWE-611,rohe\pysaml2\/dataset_py\CVE-2016-10149\6e09a25d9b4b7aa7a506853210a9a14100b8bc9b\__init___1.py,52,"tree = defusedxml.ElementTree.fromstring(xml_string)
+","tree = ElementTree.fromstring(xml_string)
+",tree = defusedxml.ElementTree.fromstring(xml_string),secure,0.2478010827972667
+28,CVE-2016-10149,CWE-611,rohe\pysaml2\/dataset_py\CVE-2016-10149\6e09a25d9b4b7aa7a506853210a9a14100b8bc9b\soap_2.py,162,"        envelope = defusedxml.ElementTree.fromstring(text)
+
+","        envelope = ElementTree.fromstring(text)
+",envelope = defusedxml.ElementTree.fromstring(text),secure,0.2580404796959987
+29,CVE-2016-10149,CWE-611,rohe\pysaml2\/dataset_py\CVE-2016-10149\6e09a25d9b4b7aa7a506853210a9a14100b8bc9b\soap_3.py,184,"        envelope = defusedxml.ElementTree.fromstring(text)
+
+","        envelope = ElementTree.fromstring(text)
+",envelope = defusedxml.ElementTree.fromstring(text),secure,0.2580404796959987
+30,CVE-2016-6903,CWE-264,ghantoos\lshell\/dataset_py\CVE-2016-6903\e72dfcd1f258193f9aaea3591ecbdaed207661a0\sec_1.py,41,line = line.strip(),"line = "" "".join(line.split())",line = line.strip(),secure,1.0
+31,CVE-2017-16618,NVD-CWE-noinfo,tadashi-aikawa\owlmixin\/dataset_py\CVE-2017-16618\5d0575303f6df869a515ced4285f24ba721e0d4e\util_2.py,79,"return yaml.safe_load(f)
+","return yaml.load(f)
+",return yaml.safe_load(f),secure,0.2287099791007134
+32,CVE-2017-17713,CWE-89,boxug\trape\/dataset_py\CVE-2017-17713\628149159ba25adbfc29a3ae1d4b10c7eb936dd3\stats_1.py,36,"    rows = db.sentences_stats('get_online', vId)
+
+","    rows = db.sentences_stats('get_online')
+","rows = db.sentences_stats('get_online' , vId)",secure,0.0810475947004645
+33,CVE-2017-17713,CWE-89,boxug\trape\/dataset_py\CVE-2017-17713\628149159ba25adbfc29a3ae1d4b10c7eb936dd3\stats_2.py,45,"    d = db.sentences_stats('get_preview', t)
+
+","    d = db.sentences_stats('get_preview', vId)
+","d = db.sentences_stats('get_preview', t)",secure,0.0860532839833922
+34,CVE-2017-17713,CWE-89,boxug\trape\/dataset_py\CVE-2017-17713\628149159ba25adbfc29a3ae1d4b10c7eb936dd3\stats_3.py,46,"    n = db.sentences_stats('id_networks', t)
+
+","    n = db.sentences_stats('id_networks', vId)
+","n = db.sentences_stats('id_networks', t)",secure,0.0860532839833922
+35,CVE-2017-17713,CWE-89,boxug\trape\/dataset_py\CVE-2017-17713\628149159ba25adbfc29a3ae1d4b10c7eb936dd3\victim_1.py,82,"        db.sentences_victim('report_online', [vrequest], 2)
+
+","        db.sentences_victim('report_online', [vrequest])
+","db.sentences_victim('report_online', [vrequest] , 2)",secure,0.0382995557445331
+36,CVE-2017-17714,CWE-79,boxug\trape\/dataset_py\CVE-2017-17714\628149159ba25adbfc29a3ae1d4b10c7eb936dd3\victim_1.py,82,"        db.sentences_victim('report_online', [vrequest], 2)
+
+","        db.sentences_victim('report_online', [vrequest])
+","db.sentences_victim('report_online', [vrequest] , 2)",secure,0.0382995557445331
+37,CVE-2017-7266,CWE-601,Netflix\security\/dataset_py\CVE-2017-7266\3b4da13efabb05970c80f464a50d3c1c12262466\logout_1.py,12,"if not current_user.is_authenticated:
+","if not current_user.is_authenticated():
+",if not current_user.is_authenticated:,secure,0.0529027952819181
+38,CVE-2017-7266,CWE-601,Netflix\security\/dataset_py\CVE-2017-7266\3b4da13efabb05970c80f464a50d3c1c12262466\modules_1.py,181,"if current_user.is_authenticated:
+","if current_user.is_authenticated():
+",if current_user.is_authenticated:,secure,0.0592824458523888
+39,CVE-2017-7266,CWE-601,Netflix\security\/dataset_py\CVE-2017-7266\3b4da13efabb05970c80f464a50d3c1c12262466\modules_2.py,190,"if current_user.is_authenticated:
+","if current_user.is_authenticated():
+",if current_user.is_authenticated:,secure,0.0592824458523888
+40,CVE-2018-10895,CWE-352/CWE-352,qutebrowser\qutebrowser\/dataset_py\CVE-2018-10895\43e58ac865ff862c2008c510fc5f7627e10b4660\webkitqutescheme_1_1.py,34,"mimetype, data = qutescheme.data_for_url(url)","mimetype, data = qutescheme.data_for_url(request.url())","mimetype, data = qutescheme.data_for_url(url)",secure,0.0923262148223516
+41,CVE-2018-7889,CWE-502,kovidgoyal\calibre\/dataset_py\CVE-2018-7889\aeb5b036a0bf657951756688b3c72bd68b6e4a7d\bookmarkmanager_2.py,190,return item.data(Qt.UserRole).copy(),return cPickle.loads(bytes(item.data(Qt.UserRole))),return item.data(Qt.UserRole).copy(),secure,0.4412503949011204
+42,CVE-2019-18933,NVD-CWE-noinfo,zulip\zulip\/dataset_py\CVE-2019-18933\0c2cc41d2e40807baa5ee2c72987ebfb64ea2eb6\users_1.py,313,"bot_profile = do_create_user(email=email, password=None,","bot_profile = do_create_user(email=email, password='',","bot_profile = do_create_user(email=email, password=None,",secure,0.0967520532140326
+43,CVE-2020-13124,CWE-78,sabnzbd\sabnzbd\/dataset_py\CVE-2020-13124\develop\misc_1.py,991,"        txt = p.stdout.read()
+
+","        txt = platform_btou(p.stdout.read())
+",txt = p.stdout.read(),secure,0.4839995505869126
+44,CVE-2020-15141,CWE-22,triaxtec\openapi-python-client\/dataset_py\CVE-2020-15141\3e7dfae5d0b3685abf1ede1bc6c086a116ac4746\utils_2.py,25,"return stringcase.spinalcase(group_title(_sanitize(value)))
+","return stringcase.spinalcase(value)
+",return stringcase.spinalcase(group_title(_sanitize(value))),secure,0.3809675813168247
+45,CVE-2020-15235,CWE-200,ractf\core\/dataset_py\CVE-2020-15235\f3dc89b9f6ab1544a289b3efc06699b13d63e0bd\config_1.py,68,"    return key in backend.get('sensitive_fields')
+
+","def set_bulk(values: dict):
+",return key in backend.get('sensitive_fields'),secure,1.0
+46,CVE-2020-36324,CWE-79,wikimedia\analytics-quarry-web\/dataset_py\CVE-2020-36324\4b7e1d6a3a52ec6cf826a971135a38b0f74785d2\app_1.py,394,"            mimetype='application/json'
+
+","        return Response(json.dumps({'key': key, 'value': get_preferences()[key]}))
+","mimetype='application/json',",secure,1.0
+47,CVE-2020-36324,CWE-79,wikimedia\analytics-quarry-web\/dataset_py\CVE-2020-36324\4b7e1d6a3a52ec6cf826a971135a38b0f74785d2\app_2.py,399,"            mimetype='application/json'
+
+","        return Response(json.dumps({'key': key, 'error': 'novalue'}))
+",mimetype='application/json',secure,1.0
+48,CVE-2020-36324,CWE-79,wikimedia\analytics-quarry-web\/dataset_py\CVE-2020-36324\4b7e1d6a3a52ec6cf826a971135a38b0f74785d2\app_3.py,411,"        mimetype='application/json'
+
+","    return Response(json.dumps({'key': key, 'success': ''})), 201
+",mimetype='application/json',secure,1.0
+49,CVE-2020-36660,NVD-CWE-noinfo/CWE-200,paxswill\evesrp\/dataset_py\CVE-2020-36660\9e03f68e46e85ca9c9694a6971859b3ee66f0240\api_1.py,46,"@login_required
+"," def user_detail(user_id):
+",@login_required,secure,1.0
+50,CVE-2020-36660,NVD-CWE-noinfo/CWE-200,paxswill\evesrp\/dataset_py\CVE-2020-36660\9e03f68e46e85ca9c9694a6971859b3ee66f0240\api_2.py,48,"if not current_user.admin and not \
+
+","user = User.query.get_or_404(user_id)
+
+",if not current_user.admin and not \,secure,1.0
+51,CVE-2020-36660,NVD-CWE-noinfo/CWE-200,paxswill\evesrp\/dataset_py\CVE-2020-36660\9e03f68e46e85ca9c9694a6971859b3ee66f0240\api_3.py,76,"@login_required
+","def group_detail(group_id):
+",@login_required,secure,1.0
+52,CVE-2020-36660,NVD-CWE-noinfo/CWE-200,paxswill\evesrp\/dataset_py\CVE-2020-36660\9e03f68e46e85ca9c9694a6971859b3ee66f0240\api_4.py,78,"if not current_user.admin and not \
+","group = Group.query.get_or_404(group_id)
+",if not current_user.admin and not \,secure,1.0
+53,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\media_2.py,32,"content = xml_elem('{%s}content' % MEDIA_NS, group)
+
+","content = etree.SubElement(group, '{%s}content' % MEDIA_NS)
+
+","content = xml_elem('{%s}content' % MEDIA_NS, group)",secure,0.2991135700424185
+54,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\media_3.py,42,"group = xml_elem('{%s}group' % MEDIA_NS, entry)
+","group = etree.SubElement(entry, '{%s}group' % MEDIA_NS)
+","group = xml_elem('{%s}group' % MEDIA_NS, entry)",secure,0.2991135700424185
+55,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\media_4.py,44,"thumbnail = xml_elem('{%s}thumbnail' % MEDIA_NS, group)
+","thumbnail = etree.SubElement(group, '{%s}thumbnail' % MEDIA_NS)
+","thumbnail = xml_elem('{%s}thumbnail' % MEDIA_NS, group)",secure,0.2717917528832889
+56,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_10.py,71,"owner_name = xml_elem('{%s}name' % ITUNES_NS, owner)
+","owner_name = etree.SubElement(owner, '{%s}name' % ITUNES_NS)
++            
+","owner_name = xml_elem('{%s}name' % ITUNES_NS, owner)",secure,0.2958419685162834
+57,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_11.py,73,"owner_email = xml_elem('{%s}email' % ITUNES_NS, owner)
+
+","owner_email = etree.SubElement(owner, '{%s}email' % ITUNES_NS)
+
+","owner_email = xml_elem('{%s}email' % ITUNES_NS, owner)",secure,0.2573700996241472
+58,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_12.py,77,"subtitle = xml_elem('{%s}subtitle' % ITUNES_NS, channel)
+","subtitle = etree.SubElement(channel, '{%s}subtitle' % ITUNES_NS)
+","subtitle = xml_elem('{%s}subtitle' % ITUNES_NS, channel)",secure,0.2573700996241472
+59,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_13.py,81,"summary = xml_elem('{%s}summary' % ITUNES_NS, channel)
+","summary = etree.SubElement(channel, '{%s}summary' % ITUNES_NS)
+","summary = xml_elem('{%s}summary' % ITUNES_NS, channel)",secure,0.2815106382967012
+60,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_2.py,37,"block = xml_elem('{%s}block' % ITUNES_NS, channel)
+","block = etree.SubElement(channel, '{%s}block' % ITUNES_NS)
+","block = xml_elem('{%s}block' % ITUNES_NS, channel)",secure,0.2815106382967012
+61,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_3.py,46,"category = xml_elem('{%s}category' % ITUNES_NS, channel)
+","category = etree.SubElement(channel,'{%s}category' % ITUNES_NS)
+","category = xml_elem('{%s}category' % ITUNES_NS, channel)",secure,0.2748327214056465
+62,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_4.py,50,"subcategory = xml_elem('{%s}category' % ITUNES_NS, category)
+","subcategory = etree.SubElement(category,'{%s}category' % ITUNES_NS)
+","subcategory = xml_elem('{%s}category' % ITUNES_NS, category)",secure,0.2651206847530791
+63,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_5.py,54,"image = xml_elem('{%s}image' % ITUNES_NS, channel)
+","image = etree.SubElement(channel, '{%s}image' % ITUNES_NS)
+","image = xml_elem('{%s}image' % ITUNES_NS, channel)",secure,0.2815106382967012
+64,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_6.py,58,"explicit = xml_elem('{%s}explicit' % ITUNES_NS, channel)
+","explicit = etree.SubElement(channel, '{%s}explicit' % ITUNES_NS)
+","explicit = xml_elem('{%s}explicit' % ITUNES_NS, channel)",secure,0.2573700996241472
+65,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_7.py,62,"complete = xml_elem('{%s}complete' % ITUNES_NS, channel)
+","complete = etree.SubElement(channel, '{%s}complete' % ITUNES_NS)
+","complete = xml_elem('{%s}complete' % ITUNES_NS, channel)",secure,0.2815106382967012
+66,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_8.py,66,"new_feed_url = xml_elem('{%s}new-feed-url' % ITUNES_NS, channel)
+
+
+","new_feed_url = etree.SubElement(channel,'{%s}new-feed-url' % ITUNES_NS)
+
+
+","new_feed_url = xml_elem('{%s}new-feed-url' % ITUNES_NS, channel)",secure,0.1894480039286574
+67,CVE-2020-5227,CWE-776/CWE-776,lkiesow\python-feedgen\/dataset_py\CVE-2020-5227\f57a01b20fa4aaaeccfa417f28e66b4084b9d0cf\podcast_9.py,70,"owner = xml_elem('{%s}owner' % ITUNES_NS, channel)
+","owner = etree.SubElement(channel, '{%s}owner' % ITUNES_NS)
+","owner = xml_elem('{%s}owner' % ITUNES_NS, channel)",secure,0.2815106382967012
+68,CVE-2021-25963,CWE-79/CWE-79,shuup\shuup\/dataset_py\CVE-2021-25963\75714c37e32796eb7cbb0d977af5bcaa26573588\_process_1.py,62,"        raise Http404(""Error! Phase with identifier `%s` not found."" % escape(requested_phase_identifier))
+
+","        raise Http404(""Error! Phase with identifier `%s` not found."" % requested_phase_identifier)  # pragma: no cover
+
+","raise Http404(""Error! Phase with identifier `%s` not found."" % escape(requested_phase_identifier))",secure,0.1945185168144372
+69,CVE-2021-25963,CWE-79/CWE-79,shuup\shuup\/dataset_py\CVE-2021-25963\75714c37e32796eb7cbb0d977af5bcaa26573588\excs_2.py,38,"yield escape(force_text(obj.args[0]))
+","yield force_text(obj.args[0])
+",yield escape(force_text(obj.args[0])),secure,0.2718393174803593
+70,CVE-2021-25963,CWE-79/CWE-79,shuup\shuup\/dataset_py\CVE-2021-25963\75714c37e32796eb7cbb0d977af5bcaa26573588\excs_3.py,40,"yield escape(force_text(obj))
+","yield force_text(obj)
+",yield escape(force_text(obj)),secure,0.4198977941129507
+71,CVE-2021-29421,CWE-611,pikepdf\pikepdf\/dataset_py\CVE-2021-29421\3f38f73218e5e782fe411ccbb3b44a793c0b343a\metadata_3.py,328,"            return parse_xml(BytesIO(xml), recover=True)
+
+","            return parse(BytesIO(xml), parser)
+","return parse_xml(BytesIO(xml), recover=True)",secure,0.3493196258170032
+72,CVE-2021-29431,CWE-20,matrix-org\sydent\/dataset_py\CVE-2021-29431\0f00412017f25619bc36c264b29ea96808bf310a\registerservlet_1.py,35,if not is_valid_matrix_server_name(matrix_server):,if not is_valid_hostname(matrix_server):,if not is_valid_matrix_server_name(matrix_server):,secure,0.2185159195664507
+73,CVE-2021-3994,CWE-79,django-helpdesk\django-helpdesk\/dataset_py\CVE-2021-3994\a22eb0673fe0b7784f99c6b5fd343b64a6700f06\models_1.py,52,pattern = fr'([\[\s\S\]]*?)\(([\s\S]*?):([\s\S]*?)\)',pattern = fr'([\[\s\S\]]*?)\(([\s\S]*?):([\[\s\S\]]*?)\)',pattern = fr'([\[\s\S\]]*?)\(([\s\S]*?):([\s\S]*?)\)',secure,0.0773867903432747
+74,CVE-2021-4041,CWE-116/CWE-20,ansible\ansible-runner\/dataset_py\CVE-2021-4041\3533f265f4349a3f2a0283158cd01b59a6bbc7bd\doc_1.py,56,"        self.cmdline_args.extend(plugin_names)
+
+","        self.cmdline_args.append("" "".join(plugin_names))
+",self.cmdline_args.extend(plugin_names),secure,0.2579038566305709
+75,CVE-2021-4041,CWE-116/CWE-20,ansible\ansible-runner\/dataset_py\CVE-2021-4041\3533f265f4349a3f2a0283158cd01b59a6bbc7bd\runner_1.py,439,"cmd = [container_cli, 'kill', container_name]","cmd = '{} kill {}'.format(container_cli, container_name)","cmd = [container_cli, 'kill', container_name]",secure,0.5162184033157653
+76,CVE-2021-41131,CWE-22,theupdateframework\python-tuf\/dataset_py\CVE-2021-41131\4ad7ae48fda594b640139c3b7eae21ed5155a102\updater_1.py,134,"encoded_name = parse.quote(rolename, """")
+
+","encoded_name = rolename
+
+","encoded_name = parse.quote(rolename, """")",secure,0.5382834968766932
+77,CVE-2021-41131,CWE-22,theupdateframework\python-tuf\/dataset_py\CVE-2021-41131\4ad7ae48fda594b640139c3b7eae21ed5155a102\updater_2.py,140,"encoded_name = parse.quote(rolename, """")
+","encoded_name = rolename
+","encoded_name = parse.quote(rolename, """")",secure,0.5382834968766932
+78,CVE-2021-41213,CWE-662/CWE-667,tensorflow\tensorflow\/dataset_py\CVE-2021-41213\afac8158d43691661ad083f6dd9e56f327c1dcb7\def_function_2.py,382,"self._lock = threading.RLock()
+","self._lock = threading.Lock()
+",self._lock = threading.RLock(),secure,0.1716706167690345
+79,CVE-2021-4162,CWE-352,archivy\archivy\/dataset_py\CVE-2021-4162\796c3ae318eea183fc88c87ec5a27355b0f6a99d\routes_1.py,223,"@app.route(""/dataobj/delete/<int:dataobj_id>"", methods=[""POST""])","@app.route(""/dataobj/delete/<int:dataobj_id>"", methods=[""DELETE"", ""GET""])","@app.route(""/dataobj/delete/<int:dataobj_id>"", methods=[""POST""])",secure,0.1338330982875786
+80,CVE-2021-4164,CWE-352,janeczku\calibre-web\/dataset_py\CVE-2021-4164\785726deee13b4d56f6c3503dd57c1e3eb7d6f30\shelf_2.py,94,"@shelf.route(""/shelf/massadd/<int:shelf_id>"", methods=[""POST""])
+","@shelf.route(""/shelf/massadd/<int:shelf_id>"")
+","@shelf.route(""/shelf/massadd/<int:shelf_id>"" , methods=[""POST""])",secure,0.116277660512712
+81,CVE-2021-4164,CWE-352,janeczku\calibre-web\/dataset_py\CVE-2021-4164\785726deee13b4d56f6c3503dd57c1e3eb7d6f30\shelf_3.py,146,"@shelf.route(""/shelf/remove/<int:shelf_id>/<int:book_id>"", methods=[""POST""])
+ 
+","@shelf.route(""/shelf/remove/<int:shelf_id>/<int:book_id>"")
+","@shelf.route(""/shelf/remove/<int:shelf_id>/<int:book_id>"" , methods=[""POST""])",secure,0.0879803639782685
+82,CVE-2021-43831,CWE-22/CWE-22,gradio-app\gradio\/dataset_py\CVE-2021-43831\41bd3645bdb616e1248b2167ca83636a2653f781\networking_2.py,374,"        return send_file(safe_join(app.cwd, path))
+","        return send_file(os.path.join(app.cwd, path))
+","return send_file(safe_join(app.cwd, path))",secure,0.1755360009555238
+83,CVE-2022-0315,CWE-668/CWE-377,horovod\horovod\/dataset_py\CVE-2022-0315\b96ecae4dc69fc0a83c7c2d3f1dde600c20a1b41\js_run_1.py,88,"        fd, path = tempfile.mkstemp()
+","    path = tempfile.mktemp() if path is None else path
+","fd, path = tempfile.mkstemp()",secure,0.4822113260886678
+84,CVE-2022-0430,NVD-CWE-noinfo/CWE-200,httpie\httpie\/dataset_py\CVE-2022-0430\65ab7d5caaaf2f95e61f9dd65441801c2ddee38b\client_1.py,130,httpie_session.remove_cookies(expired_cookies),"httpie_session.remove_cookies(
+                cookie['name'] for cookie in expired_cookies
+            )",httpie_session.remove_cookies(expired_cookies),secure,0.4398469383135848
+85,CVE-2022-0845,CWE-94/CWE-94,pytorchlightning\pytorch-lightning\/dataset_py\CVE-2022-0845\8b7a12c52e52a06408e9231647839ddb4665e8ae\argparse_1.py,70,"                val = literal_eval(val)
+
+","                val = eval(val)
+",val = literal_eval(val),secure,1.0
+86,CVE-2022-0869,CWE-601/CWE-601,nitely\spirit\/dataset_py\CVE-2022-0869\8f32f89654d6c30d56e0dd167059d32146fb32ef\views_4.py,121,"return safe_redirect(request, 'next', reverse('spirit:user:update'))
+","return redirect(request.GET.get('next', reverse('spirit:user:update')))
+","return safe_redirect(request, 'next', reverse('spirit:user:update'))",secure,0.2899603516018321
+87,CVE-2022-0939,CWE-918,janeczku\calibre-web\/dataset_py\CVE-2022-0939\4545f4a20d9ff90b99bbd4e3e34b6de4441d6367\cps_1.py,55,app.register_blueprint(EditBook),app.register_blueprint(editbook),app.register_blueprint(EditBook),secure,0.1716706167690345
+88,CVE-2022-2054,CWE-77/CWE-77,nuitka\nuitka\/dataset_py\CVE-2022-2054\09647745d7cbb6ff32f9fa948f19d5558b32bcad\__main___1.py,14,"sys.path = ast.literal_eval(os.environ[""NUITKA_PYTHONPATH""])
+","sys.path = eval(os.environ[""NUITKA_PYTHONPATH""])
+","sys.path = ast.literal_eval(os.environ[""NUITKA_PYTHONPATH""]) + sys.path",secure,0.1489697650055084
+89,CVE-2022-2054,CWE-77/CWE-77,nuitka\nuitka\/dataset_py\CVE-2022-2054\09647745d7cbb6ff32f9fa948f19d5558b32bcad\__main___2.py,52,"setPreloadedPackagePaths(ast.literal_eval(os.environ[""NUITKA_NAMESPACES""]))
+","setPreloadedPackagePaths(eval(os.environ[""NUITKA_NAMESPACES""]))
+","setPreloadedPackagePaths(ast.literal_eval(os.environ[""NUITKA_NAMESPACES""]))",secure,0.1151586575391787
+90,CVE-2022-2054,CWE-77/CWE-77,nuitka\nuitka\/dataset_py\CVE-2022-2054\09647745d7cbb6ff32f9fa948f19d5558b32bcad\__main___3.py,58,"setPthImportedPackages(ast.literal_eval(os.environ[""NUITKA_PTH_IMPORTED""]))
+
+","setPthImportedPackages(eval(os.environ[""NUITKA_PTH_IMPORTED""]))
+
+","setPthImportedPackages(ast.literal_eval(os.environ[""NUITKA_PTH_IMPORTED""]))",secure,0.1030661335211229
+91,CVE-2022-2111,CWE-434,inventree\inventree\/dataset_py\CVE-2022-2111\26bf51c20a1c9b3130ac5dd2e17649bece5ff84f\admin_1.py,18,"class LocationResource(InvenTreeResource):
+
+","class LocationResource(ModelResource):
+",class LocationResource(InvenTreeResource):,secure,0.3698211463846608
+92,CVE-2022-2111,CWE-434,inventree\inventree\/dataset_py\CVE-2022-2111\26bf51c20a1c9b3130ac5dd2e17649bece5ff84f\admin_2.py,64,"class StockItemResource(InvenTreeResource):
+
+","class StockItemResource(ModelResource):
+",class StockItemResource(InvenTreeResource):,secure,0.3002264825216403
+93,CVE-2022-2113,CWE-79,inventree\inventree\/dataset_py\CVE-2022-2113\26bf51c20a1c9b3130ac5dd2e17649bece5ff84f\admin_1.py,18,"class LocationResource(InvenTreeResource):
+
+","class LocationResource(ModelResource):
+",class LocationResource(InvenTreeResource):,secure,0.3698211463846608
+94,CVE-2022-2113,CWE-79,inventree\inventree\/dataset_py\CVE-2022-2113\26bf51c20a1c9b3130ac5dd2e17649bece5ff84f\admin_2.py,64,"class StockItemResource(InvenTreeResource):
+
+","class StockItemResource(ModelResource):
+",class StockItemResource(InvenTreeResource):,secure,0.3002264825216403
+95,CVE-2022-2872,CWE-434,octoprint\octoprint\/dataset_py\CVE-2022-2872\3e3c11811e216fb371a33e28412df83f9701e5b0\storage_2.py,681,"        if not octoprint.filemanager.valid_file_type(destination_data[""name""]):
+
+","        if source_data[""fullpath""] == destination_data[""fullpath""]:
+","if not octoprint.filemanager.valid_file_type(destination_data[""name""]):",secure,1.0
+96,CVE-2022-29216,CWE-94,tensorflow\tensorflow\/dataset_py\CVE-2022-29216\c5da7af048611aa29e9382371f0aed5018516cac\saved_model_cli_1.py,396,"  input_exprs = preprocess_input_exprs_arg_string(input_exprs_str)
+
+","  input_exprs = preprocess_input_exprs_arg_string(input_exprs_str, safe=False)
+",input_exprs = preprocess_input_exprs_arg_string(input_exprs_str),secure,0.095028942996965
+97,CVE-2022-31052,CWE-674,matrix-org\synapse\/dataset_py\CVE-2022-31052\fa1308061802ac7b7d20e954ba7372c5ac292333\preview_html_1.py,161,"for el in _iterate_over_text(tree.find(""body""), TAGS_TO_REMOVE)","for el in _iterate_over_text(tree.find(""body""), *TAGS_TO_REMOVE)","for el in _iterate_over_text(tree.find(""body""), TAGS_TO_REMOVE)",secure,0.0607205682309202
+98,CVE-2022-31185,CWE-200,makedeb\mprweb\/dataset_py\CVE-2022-31185\d13e3f2f5a9c0b0f6782f35d837090732026ad77\accounts_3.py,278,"            HideEmail=hide_email,
+
+","            HideEmail=H,
+","HideEmail=hide_email,",secure,1.0
+99,CVE-2022-31506,CWE-22,cmusatyalab\opendiamond\/dataset_py\CVE-2022-31506\398049c187ee644beabab44d6fece82251c1ea56\video_store_1.py,110,"return safe_join(DATAROOT, obj_path)
+","return os.path.join(DATAROOT, obj_path)
+","return safe_join(DATAROOT, obj_path)",secure,0.166631922302306
+100,CVE-2022-31506,CWE-22,cmusatyalab\opendiamond\/dataset_py\CVE-2022-31506\398049c187ee644beabab44d6fece82251c1ea56\video_store_2.py,114,"return safe_join(INDEXDIR, index)
+","return os.path.join(INDEXDIR, index)
+","return safe_join(INDEXDIR, index)",secure,0.2378637074630962
+101,CVE-2022-3221,CWE-352,ikus060\rdiffweb\/dataset_py\CVE-2022-3221\9125f5a2d918fed0f3fc1c86fa94cd1779ed9f73\pref_sshkeys_2.py,92,"        elif action == 'delete' and delete_form.is_submitted():
+
+","        elif action == 'delete':
+",elif action == 'delete' and delete_form.is_submitted():,secure,0.5282352235413008
+102,CVE-2022-3362,CWE-613/CWE-613,ikus060\rdiffweb\/dataset_py\CVE-2022-3362\6efb995bc32c8a8e9ad755eb813dec991dffb2b8\login_1.py,59,"                ).commit()
+
+","                ).add()
+",).commit(),secure,1.0
+103,CVE-2022-3362,CWE-613/CWE-613,ikus060\rdiffweb\/dataset_py\CVE-2022-3362\6efb995bc32c8a8e9ad755eb813dec991dffb2b8\login_2.py,72,"            userobj.commit()
+
+","            userobj.add()
+",userobj.commit(),secure,1.0
+104,CVE-2022-3362,CWE-613/CWE-613,ikus060\rdiffweb\/dataset_py\CVE-2022-3362\6efb995bc32c8a8e9ad755eb813dec991dffb2b8\page_delete_1.py,54,"cherrypy.engine.publish('schedule_task', delete_repo, repo, path)","cherrypy.engine.publish('schedule_task', repo.delete, path)","cherrypy.engine.publish('schedule_task', delete_repo, repo, path)",secure,0.177136165961212
+105,CVE-2022-3364,CWE-770,ikus060\rdiffweb\/dataset_py\CVE-2022-3364\b62c479ff6979563c7c23e7182942bc4f460a2c7\page_admin_users_1.py,58,"            validators.length(max=256, message=_('Fullname too long.')),
+
+","    fullname = StringField(_('Fullname'), validators=[validators.optional()])
+","validators.length(max=256, message=_('Fullname too long.')),",secure,1.0
+106,CVE-2022-36080,CWE-79,Linbreux\wikmd\/dataset_py\CVE-2022-36080\259412c47d64d5b85980f95345179fbf05927798\wiki_2.py,200,"            html = clean_html(html)
+
+","        except Exception as e:
+",html = clean_html(html),secure,1.0
+107,CVE-2022-39275,CWE-863/CWE-20,saleor\saleor\/dataset_py\CVE-2022-39275\96e04c092ddcac17b14f2e31554aa02d9006d0ce\base_1.py,362,"        instance = cls.get_node_or_error(info, node_id, only_type=Address)
+
+","        instance = cls.get_node_or_error(info, node_id, Address)
+","instance = cls.get_node_or_error(info, node_id, only_type=Address)",secure,0.1306155125715695
+108,CVE-2022-42725,CWE-59,linuxmint\warpinator\/dataset_py\CVE-2022-42725\f4907ef6a17a189d56ab0a9da4b53190b061ad75\util_1.py,238,"if file.query_exists(None):
+","if GLib.file_test(path, GLib.FileTest.EXISTS):
+",if file.query_exists(None):,secure,1.0
+109,CVE-2022-46179,CWE-639,LiuWoodsCode\LiuOS\/dataset_py\CVE-2022-46179\c658b4f3e57258acf5f6207a90c2f2169698ae22\core_1.py,107,"if os.environ.get('GITHUB_ACTIONS') == ""true"":","if os.environ.get('GITHUB_ACTIONS') != """":","if os.environ.get('GITHUB_ACTIONS') == ""true"":",secure,0.0952839837154848
+110,CVE-2022-4721,CWE-75,ikus060\rdiffweb\/dataset_py\CVE-2022-4721\6afaae56a29536f0118b3380d296c416aa6d078d\notification_2.py,93,"            ""email_password_changed.html"", **{""header_name"": self.app.cfg.header_name, 'user': userobj}
+
+","            ""password_changed.html"", **{""header_name"": self.app.cfg.header_name, 'user': userobj}
+","""email_password_changed.html"", **{""header_name"": self.app.cfg.header_name, 'user': userobj}",secure,0.0441561246171411
+111,CVE-2022-4729,CWE-79/CWE-707,graphite-project\graphite-web\/dataset_py\CVE-2022-4729\2f178f490e10efc03cd1d27c72f64ecab224eb23\base_1.py,24,"xss = is_unsafe_str(content)
+","xss = response.content.find(b""<"") != -1 or response.content.find(b"">"") != -1
+",xss = is_unsafe_str(content),secure,1.0
+112,CVE-2022-4730,CWE-79/CWE-707,graphite-project\graphite-web\/dataset_py\CVE-2022-4730\2f178f490e10efc03cd1d27c72f64ecab224eb23\base_1.py,24,"xss = is_unsafe_str(content)
+","xss = response.content.find(b""<"") != -1 or response.content.find(b"">"") != -1
+",xss = is_unsafe_str(content),secure,1.0
+113,CVE-2023-28836,CWE-79,wagtail\wagtail\/dataset_py\CVE-2023-28836\ff806ab173a504395fdfb3139eb0a29444ab4b91\views_1.py,1031,"            return format_html(
+
+","            return mark_safe(
+",return format_html(,secure,1.0
+114,CVE-2023-30608,CWE-1333,andialbrecht\sqlparse\/dataset_py\CVE-2023-30608\c457abd5f097dd13fb21543381e7cfafe7d31cfb\keywords_1.py,41,"(r""'(''|\\'|[^'])*'"", tokens.String.Single),
+
+","(r""'(''|\\\\|\\'|[^'])*'"", tokens.String.Single),
+
+","(r""'(''|\\'|[^'])*'"", tokens.String.Single),",secure,0.0561723541730188
+115,CVE-2023-30797,CWE-330/CWE-330,Netflix\lemur\/dataset_py\CVE-2023-30797\666d853212174ee7f4e6f8b3b4b389ede1872238\lemur.conf_3.py,22,"    secret_key = secret_key + ''.join(secrets.choice(string.ascii_lowercase) for x in range(round(length / 4)))
+
+","    secret_key = secret_key + ''.join(random.choice(string.ascii_lowercase) for x in range(round(length / 4)))
+",secret_key = secret_key + ''.join(secrets.choice(string.ascii_lowercase) for x in range(round(length / 4))),secure,0.0430043399398971
+116,CVE-2023-30797,CWE-330/CWE-330,Netflix\lemur\/dataset_py\CVE-2023-30797\666d853212174ee7f4e6f8b3b4b389ede1872238\lemur.conf_4.py,23,"    return secret_key + ''.join(secrets.choice(string.digits) for x in range(round(length / 4)))
+
+","    return secret_key + ''.join(random.choice(string.digits) for x in range(round(length / 4)))
+",return secret_key + ''.join(secrets.choice(string.digits) for x in range(round(length / 4))),secure,0.0542286717117908
+117,CVE-2023-30797,CWE-330/CWE-330,Netflix\lemur\/dataset_py\CVE-2023-30797\666d853212174ee7f4e6f8b3b4b389ede1872238\utils_3.py,51,"    challenge += """".join(secrets.choice(string.ascii_lowercase) for x in range(6))
+
+","    challenge += """".join(random.choice(string.ascii_lowercase) for x in range(6))
+","challenge += """".join(secrets.choice(string.ascii_lowercase) for x in range(6))  # noqa",secure,0.0586055829795131
+118,CVE-2023-30797,CWE-330/CWE-330,Netflix\lemur\/dataset_py\CVE-2023-30797\666d853212174ee7f4e6f8b3b4b389ede1872238\utils_7.py,60,"    secret_key = secret_key + ''.join(secrets.choice(string.ascii_lowercase) for x in range(round(length / 4)))
+
+","    secret_key = secret_key + ''.join(random.choice(string.ascii_lowercase) for x in range(round(length / 4)))
+",secret_key = secret_key + ''.join(secrets.choice(string.ascii_lowercase) for x in range(round(length / 4))),secure,0.0430043399398971
+119,CVE-2023-30797,CWE-330/CWE-330,Netflix\lemur\/dataset_py\CVE-2023-30797\666d853212174ee7f4e6f8b3b4b389ede1872238\utils_8.py,61,"    return secret_key + ''.join(secrets.choice(string.digits) for x in range(round(length / 4)))
+
+","    return secret_key + ''.join(random.choice(string.digits) for x in range(round(length / 4)))
+",return secret_key + ''.join(secrets.choice(string.digits) for x in range(round(length / 4))),secure,0.0542286717117908
